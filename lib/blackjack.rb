@@ -39,14 +39,21 @@ end
 
 def hit?
   # code hit? here
+  valid_inputs = ["h", "s"]
+
   prompt_user
-  get_user_input
-  
-  if input == "h"
-  if input == "s"
-  else invalid_command
-    
-   end
+  user_input = get_user_input
+
+  until valid_inputs.include?(user_input)
+    invalid_command
+    prompt_user
+    user_input = get_user_input
+  end
+
+  if user_input == "h"
+    card_total += deal_card
+  end
+  card_total
 end
 
 def invalid_command
