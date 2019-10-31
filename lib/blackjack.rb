@@ -37,7 +37,7 @@ def initial_round
   return first_round
 end
 
-def hit?
+def hit?(card_total)
   # code hit? here
   valid_inputs = ["h", "s"]
 
@@ -47,7 +47,6 @@ def hit?
   until valid_inputs.include?(user_input)
     invalid_command
     prompt_user
-    get_user_input
     user_input = get_user_input
   end
 
