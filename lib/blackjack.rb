@@ -31,8 +31,7 @@ end
 def initial_round
   # code #initial_round here
   
-  deal_card
-  display_card_total
+  2.(display_card_total += deal_card)
 end
 
 def hit?
